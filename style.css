@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(107, 117, 207, 0.4), rgba(245, 96, 96, 0.4)), url('./christmas.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: opacity 2s ease-in-out;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 6rem);
+}
+
+#counter {
+    margin: 2rem auto;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+span {
+    font-size: clamp(4rem, 6vw, 8rem);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    #counter {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
